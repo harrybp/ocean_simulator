@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style type="text/css">
+    canvas {
+      width: 100%;
+      height: 100%;
+      border: solid black;
+      border-width: 0px 2px 0px 2px;
+    }
+    html, body {margin: 0; height: 100%; overflow: hidden}
+  </style>
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row", stlye="height: 100%">
+      <div class='col-lg-10 col-sm-8 col-6'>
+        <canvas id='canvas'></canvas>
+      </div>
+      <div class='col-lg-2 col-sm-4 col-6'>
+        <br>
+        <h3>Controls</h3>
+        <h5>Barriers</h5>
+          <input type="radio" name="brush" value="p" onchange='radios("p")' checked> Paint <br>
+          <input type="radio" name="brush" value="e" onchange='radios("e")'> Erase <br><br>
+        <h5>Creatures</h5>
+          <input type="radio" name="brush" value="b" onchange='radios("b")'> Create Fish<br>
+          <input type="radio" name="brush" value="w" onchange='radios("w")'> Create Worm<br>
+          <input type="radio" name="brush" value="k" onchange='radios("k")'> Kill
+        <br><br>
+        <h3>Settings</h3>
+          <!--<input type="checkbox" onchange='toggleWrap()'> Wrap <br>-->
+          <input type="checkbox" onchange='toggleCohese()' checked> Cohese <br>
+          <input type="checkbox" onchange='toggleAvoidBoids()' checked> Avoid Others <br>
+          <input type="checkbox" onchange='toggleAvoidBarriers()' checked> Avoid Barriers <br>
+          <input type="checkbox" onchange='toggleAverageDirection()' checked> Average Direction <br><br>
+          <btn onclick='clearAll()' href='#' class='btn btn-danger' >Clear</btn>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+  <script src='Vector.js'></script>
+  <script src='Boid.js'></script>
+  <script src='Barrier.js'></script>
+  <script src='Pred.js'></script>
+  <script src='swarm.js'></script>
+</body>
+</html>
